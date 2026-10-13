@@ -1,0 +1,34 @@
+# Terraform: state and variable files can contain secrets, never commit them.
+# .terraform.lock.hcl IS committed on purpose (it pins provider versions).
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Kubernetes credentials
+kubeconfig*
+*.kubeconfig
+
+# Secrets, keys and local environment files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials.json
+.cloudflared/
+*tunnel*.json
+
+# Editors and OS clutter
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
